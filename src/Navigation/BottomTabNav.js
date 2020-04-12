@@ -18,21 +18,10 @@ const styles = StyleSheet.create({
 function MyTabs() {
   return (
     <Tab.Navigator
-      initialRouteName="Home"
+      initialRouteName="Profile"
       activeColor='white'
       style={{ backgroundColor: 'green' }}
     >
-      <Tab.Screen
-        name="Home"
-        component={Home}
-        onPress={() => navigation.navigate('Home')}
-        options={{
-          tabBarLabel: 'Home',
-          tabBarIcon: ({ color }) => (
-            <Icon type ="MaterialIcons" name="home" style={styles.icon} />
-          ),
-        }}
-      />
       <Tab.Screen
         name="Profile"
         component={Profile}
