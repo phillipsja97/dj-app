@@ -1,8 +1,8 @@
 import React from 'react'
 import { StyleSheet, View, Text, Image } from 'react-native'
-import { Container, Title, Content, Header, Card, CardItem, Thumbnail, Button, Icon, Left, Body, Right } from 'native-base'
+import { Container, Title, Content, Card, CardItem, Thumbnail, Button, Icon, Left, Body, Right } from 'native-base'
 
-function Profile(props) {
+function Feed(props) {
   const { route } = props
   const { item } = route.params
   const { name } = item
@@ -14,6 +14,7 @@ function Profile(props) {
             <Left>
               <Thumbnail source={{uri: 'https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/305775_10150282150822126_1246491813_n.jpg?_nc_cat=102&_nc_sid=e007fa&_nc_ohc=U9d3v19UA-EAX-XbBuu&_nc_ht=scontent-atl3-1.xx&oh=fd0db62ec3bb3bb897e91f904f82214d&oe=5EB8650E'}} />
               <Body>
+                <Title h1>{name}</Title>
                 <Text note>So, let's talk about last night. Nashville, y'all were great!</Text>
               </Body>
             </Left>
@@ -89,4 +90,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default Profile
+export default Feed

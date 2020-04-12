@@ -15,7 +15,6 @@ const styles = StyleSheet.create ({
     bottom: 0,
   },
   buttonContainer: {
-    backgroundColor: '#222',
     borderRadius: 5,
     padding: 10,
     margin: 20
@@ -26,29 +25,26 @@ const styles = StyleSheet.create ({
   }
 })
 
+const user = {
+  name: "Jamie Phillips"
+}
+
 function Home(props) {
     const { navigation } = props
     return (
        <ImageBackground source={image} style={{ height: '100%', width: '100%' }}>
        <View style={styles.text} >
-       <Image source={{
-         uri: 'https://www.logofury.com/blog/wp-content/uploads/2018/12/DJ-Logo-Idea-1.jpg'
-        }} 
-        style={{ height: 200, width: 200, marginBottom: 50 }} 
-        />
-          <View style={{ justifyContent: 'center' }}>
-          <TouchableOpacity
-            style={styles.buttonContainer}
-            onPress={() => navigation.navigate('Profile')}>
-            <Text style={styles.buttonText}>Login with Google</Text>
-          </TouchableOpacity>
-          {/* <Button full danger iconRight style={styles.button}
-          onPress={() => alert("You logged In!")}
-          >
-              <Text style={{ paddingRight: 30 }}>Sign In With Google</Text>
-              <Icon type= "AntDesign" name="google"></Icon>
-          </Button> */}
-          </View>
+        <Image source={{
+            uri: 'https://www.logofury.com/blog/wp-content/uploads/2018/12/DJ-Logo-Idea-1.jpg'
+            }} 
+            style={{ height: 200, width: 200, marginBottom: 50 }} 
+          />
+              <Button full danger iconRight
+                style={styles.buttonContainer}
+                onPress={() => navigation.navigate('Profile', { item: user }) }>
+                <Icon type="AntDesign" name="google"></Icon>
+                <Text style={styles.buttonText}>Login with Google</Text>
+              </Button>
        </View>
        </ImageBackground>
     );
