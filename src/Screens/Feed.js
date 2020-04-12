@@ -3,9 +3,6 @@ import { StyleSheet, View, Text, Image } from 'react-native'
 import { Container, Title, Content, Card, CardItem, Thumbnail, Button, Icon, Left, Body, Right, H3 } from 'native-base'
 
 function Feed(props) {
-  const { route, navigation } = props
-  const { item } = route.params
-  const { name } = item
   return (
     <Container>
       <Content>

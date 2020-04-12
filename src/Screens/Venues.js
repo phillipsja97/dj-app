@@ -4,13 +4,16 @@ import { Container, Title, Content, Header, Card, CardItem, Thumbnail, Button, I
 
 
 
-function Profile(props) {
+function Venues(props) {
+  const { route, navigation } = props
+  const { item } = route.params
+  const { name } = item
   return (
     <View>
-      <Text>Profile</Text>
+      <Text>Venues</Text>
       <Button full danger
         style={styles.buttonContainer}
-        onPress={() => navigation.navigate('Feed')}>
+        onPress={() => navigation.navigate('Feed', { item: name }) }>
         <Text style={styles.buttonText}>Social Feed</Text>
       </Button>
     </View>
@@ -40,4 +43,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default Profile
+export default Venues
