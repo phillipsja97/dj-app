@@ -2,8 +2,6 @@ import React from 'react'
 import { ImageBackground, View, Text, StyleSheet, Image, Alert, TouchableOpacity } from 'react-native'
 import { Container, Header, Title, Content, Footer, FooterTab, Left, Right, Body, Button, Icon } from 'native-base'
 
-const image = { uri: "https://images2.alphacoders.com/701/thumb-1920-70172.jpg" };
-
 const styles = StyleSheet.create ({
   text: {
     marginTop: 200,
@@ -24,10 +22,6 @@ const styles = StyleSheet.create ({
     color: '#fff'
   }
 })
-
-const user = {
-  name: "Jamie Phillips"
-}
 
 function Home(props) {
     const { navigation } = props

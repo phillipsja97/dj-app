@@ -2,7 +2,7 @@ import React from 'react';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { StyleSheet } from 'react-native';
 import { Icon } from 'native-base';
-import Home from '../Screens/Home';
+import Home from '../Screens/Messages';
 import Profile from '../Screens/Profile';
 import Feed from '../Screens/Feed';
 import Chat from '../Screens/Chat';

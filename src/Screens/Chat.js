@@ -6,7 +6,7 @@ import { AuthContext } from '../Context/Context'
 
 
 function Chat(props) {
-  const { signOut } = React.useContext(AuthContext)
+  const { navigation, route } = props;
   return (
     <React.Fragment>
     <View>

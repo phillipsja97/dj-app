@@ -19,23 +19,54 @@ function Feed(props) {
       </Appbar.Header>
       <Content>
         <Card>
-          <CardItem>
+          <CardItem style={styles.card}>
             <Left>
-              <Thumbnail source={{uri: 'https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/305775_10150282150822126_1246491813_n.jpg?_nc_cat=102&_nc_sid=e007fa&_nc_ohc=U9d3v19UA-EAX-XbBuu&_nc_ht=scontent-atl3-1.xx&oh=fd0db62ec3bb3bb897e91f904f82214d&oe=5EB8650E'}} />
+              <Thumbnail source={{uri: 'https://i.insider.com/567322aedd08952d5d8b46de?width=1100&format=jpeg&auto=webp'}} />
               <Body>
-                <H3>Jamie Phillips</H3>
-                <Text note>So, let's talk about last night. Nashville, y'all were great!</Text>
+                <H3>DJ Khaled</H3>
+                <Text note>Once again Nashville came to party. Major respect! #majorKey</Text>
               </Body>
             </Left>
           </CardItem>
-          <CardItem cardBody>
-            <Image source={{uri: 'https://www.mixcityinc.com/blog/wp-content/uploads/2016/08/Infrontofcrowd.jpg'}} style={{height: 200, width: null, flex: 1}}/>
+          <CardItem cardBody style={styles.card}>
+            <Image source={{uri: 'https://media-assets-05.thedrum.com/cache/images/thedrum-prod/s3-news-tmp-136481-dj_khaled_booking_dot_com_0--2x1--940.png'}} style={{height: 200, width: null, flex: 1}}/>
           </CardItem>
-          <CardItem>
+          <CardItem style={styles.card}>
             <Left>
               <Button transparent>
                 <Icon active name="thumbs-up" />
-                <Text>12 Likes</Text>
+                <Text>1225 Likes</Text>
+              </Button>
+            </Left>
+            <Body>
+              <Button transparent>
+                <Icon active name="chatbubbles" />
+                <Text>4 Comments</Text>
+              </Button>
+            </Body>
+            <Right>
+              <Text>19h ago</Text>
+            </Right>
+          </CardItem>
+        </Card>
+        <Card>
+          <CardItem style={styles.card}>
+            <Left>
+              <Thumbnail source={{uri: 'https://cache.umusic.com/_images/facebook/drdre/og-dre.jpg'}} />
+              <Body>
+                <H3>Dr Dre</H3>
+                <Text note>New album in the works #backToBasics</Text>
+              </Body>
+            </Left>
+          </CardItem>
+          <CardItem cardBody style={styles.card}>
+            <Image source={{uri: 'https://centralsauce.com/wp-content/uploads/2018/11/dr_dre.jpg'}} style={{height: 200, width: null, flex: 1}}/>
+          </CardItem>
+          <CardItem style={styles.card}>
+            <Left>
+              <Button transparent>
+                <Icon active name="thumbs-up" />
+                <Text>8376 Likes</Text>
               </Button>
             </Left>
             <Body>
@@ -50,33 +81,33 @@ function Feed(props) {
           </CardItem>
         </Card>
         <Card>
-          <CardItem>
+          <CardItem style={styles.card}>
             <Left>
-              <Thumbnail source={{uri: 'https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/305775_10150282150822126_1246491813_n.jpg?_nc_cat=102&_nc_sid=e007fa&_nc_ohc=U9d3v19UA-EAX-XbBuu&_nc_ht=scontent-atl3-1.xx&oh=fd0db62ec3bb3bb897e91f904f82214d&oe=5EB8650E'}} />
+              <Thumbnail source={{uri: 'https://weraveyou.com/wp-content/uploads/2020/03/Diplo-e1584370289406.jpg'}} />
               <Body>
-                <Text>Jamie Phillips</Text>
-                <Text note>GeekyAnts</Text>
+                <H3>Diplo</H3>
+                <Text note>Sometimes you have to get out of your comfort zone to build some incredible music. </Text>
               </Body>
             </Left>
           </CardItem>
-          <CardItem cardBody>
-            <Image source={{uri: 'https://www.mixcityinc.com/blog/wp-content/uploads/2016/08/Infrontofcrowd.jpg'}} style={{height: 200, width: null, flex: 1}}/>
+          <CardItem cardBody style={styles.card}>
+            <Image source={{uri: 'https://runthetrap.com/wp-content/uploads/2019/04/diplocountry-1024x512.jpg'}} style={{height: 200, width: null, flex: 1}}/>
           </CardItem>
-          <CardItem>
+          <CardItem style={styles.card}>
             <Left>
               <Button transparent>
                 <Icon active name="thumbs-up" />
-                <Text>12 Likes</Text>
+                <Text>200K+ Likes</Text>
               </Button>
             </Left>
             <Body>
               <Button transparent>
                 <Icon active name="chatbubbles" />
-                <Text>4 Comments</Text>
+                <Text>8123 Comments</Text>
               </Button>
             </Body>
             <Right>
-              <Text>11h ago</Text>
+              <Text>Yesterday</Text>
             </Right>
           </CardItem>
         </Card>
@@ -99,6 +130,9 @@ const styles = StyleSheet.create({
   },
   header: {
     backgroundColor: 'black'
+  },
+  card: {
+    backgroundColor: '#DCDCDC'
   }
 })
 
