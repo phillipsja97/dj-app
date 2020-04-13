@@ -12,6 +12,9 @@ const Tab = createMaterialBottomTabNavigator();
 const styles = StyleSheet.create({
   icon: {
     color: 'white',
+  },
+  header: {
+    backgroundColor: '#000000',
   }
 })
 
@@ -20,7 +23,6 @@ function MyTabs() {
     <Tab.Navigator
       initialRouteName="Profile"
       activeColor='white'
-      style={{ backgroundColor: 'green' }}
     >
       <Tab.Screen
         name="Profile"
@@ -28,7 +30,7 @@ function MyTabs() {
         onPress={() => navigation.navigate('Profile')}
         options={{
           tabBarLabel: 'Profile',
-          tabBarIcon: ({ color }) => (
+          tabBarIcon: () => (
             <Icon type ="MaterialIcons" name="person" style={styles.icon} />
           ),
         }}
@@ -41,8 +43,8 @@ function MyTabs() {
           tabBarLabel: 'Feed',
           tabBarIcon: ({ color }) => (
             <Icon type ="Foundation" name="social-instagram" style={styles.icon} />
-          ),
-        }}
+            ),
+          }}
       />
         <Tab.Screen
         name="Chat"

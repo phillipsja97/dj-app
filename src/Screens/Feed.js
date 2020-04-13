@@ -1,10 +1,20 @@
 import React from 'react'
 import { StyleSheet, View, Text, Image } from 'react-native'
 import { Container, Title, Content, Card, CardItem, Thumbnail, Button, Icon, Left, Body, Right, H3 } from 'native-base'
+import { Appbar, header, BackAction, Action } from 'react-native-paper';
 
 function Feed(props) {
   return (
     <Container>
+    <Appbar.Header
+          style={styles.header}
+      >
+        <Appbar.Content
+          title="Social"
+        />
+        <Appbar.Action icon="magnify"/>
+        <Appbar.Action icon="logout" />
+      </Appbar.Header>
       <Content>
         <Card>
           <CardItem>
@@ -85,6 +95,9 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold'
   },
+  header: {
+    backgroundColor: 'black'
+  }
 })
 
 export default Feed

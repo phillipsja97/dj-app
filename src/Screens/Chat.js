@@ -1,42 +1,28 @@
 import React from 'react'
 import { StyleSheet, View, Text, Image, Navigation } from 'react-native'
-import { Container, Title, Content, Header, Card, CardItem, Thumbnail, Button, Icon, Left, Body, Right } from 'native-base'
-
+import { Container, Title, Card, CardItem, Thumbnail, Button, Icon, Left, Body, Right } from 'native-base'
+import { Appbar, header, BackAction, Content, Action } from 'react-native-paper';
 
 
 function Chat(props) {
   return (
     <View>
-      <Text>Chat</Text>
-      <Button full danger
-        style={styles.buttonContainer}
-        onPress={() => navigation.navigate('Feed', { item: name }) }>
-        <Text style={styles.buttonText}>Social Feed</Text>
-      </Button>
+      <Appbar.Header
+          style={styles.header}
+      >
+        <Appbar.Content
+          title="Messages"
+        />
+        <Appbar.Action icon="magnify"/>
+        <Appbar.Action icon="logout" />
+      </Appbar.Header>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#ebebeb'
-  },
-  text: {
-    color: '#101010',
-    fontSize: 24,
-    fontWeight: 'bold'
-  },
-  buttonContainer: {
-    borderRadius: 5,
-    padding: 10,
-    margin: 20
-  },
-  buttonText: {
-    fontSize: 20,
-    color: '#fff'
+  header: {
+    backgroundColor: 'black'
   }
 })
 

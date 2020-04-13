@@ -1,18 +1,21 @@
 import React from 'react'
 import { StyleSheet, View, Text, Image, Navigation } from 'react-native'
 import { Container, Title, Content, Header, Card, CardItem, Thumbnail, Button, Icon, Left, Body, Right } from 'native-base'
-
+import { Appbar, header, BackAction, Action } from 'react-native-paper';
 
 
 function Profile(props) {
   return (
     <View>
-      <Text>Profile</Text>
-      <Button full danger
-        style={styles.buttonContainer}
-        onPress={() => navigation.navigate('Feed')}>
-        <Text style={styles.buttonText}>Social Feed</Text>
-      </Button>
+          <Appbar.Header
+          style={styles.header}
+          >
+        <Appbar.Content
+          title="Profile"
+        />
+        <Appbar.Action icon="magnify"/>
+        <Appbar.Action icon="logout" />
+      </Appbar.Header>
     </View>
   )
 }
@@ -23,6 +26,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#ebebeb'
+  },
+  header: {
+    backgroundColor: 'black'
   },
   text: {
     color: '#101010',
