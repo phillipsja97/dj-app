@@ -1,42 +1,36 @@
-// import React, { Component } from 'react';
-// import { ImageBackground, View, Text, StyleSheet, Image, Alert } from 'react-native';
-// import { Container, Header, Title, Content, Footer, FooterTab, Left, Right, Body, Button, Icon } from 'native-base';
-// import Navigator from './routes/Homestack.js';
-
-
-// export default function App() {
-//     return (
-//       <Navigator />
-//     );
-//   }
-
 import * as React from 'react';
+import { useState } from 'react';
 import { View, Text } from 'react-native';
+import MainStackNavigator from './src/Navigation/MainStackNavigator';
+import BottomTabNav from './src/Navigation/BottomTabNav';
 import { NavigationContainer } from '@react-navigation/native';
+
+import SignIn from './src/Screens/Login';
 import { createStackNavigator } from '@react-navigation/stack';
-import HomeScreen from './Homescreen';
-import Profile from './Profile';
+import { AuthContext } from './src/Context/Context';
 
-// function HomeScreen() {
-//   return (
-//     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-//       <Text>Home Screen</Text>
-//     </View>
-//   );
-// }
+const AuthStack = createStackNavigator()
 
-const Stack = createStackNavigator();
+export default function App() {
+  const [user, setUser] = useState(null)
+  const authContext = React.useMemo(() => {
+    return {
+      signIn: () => {
+        setUser('asdf');
+      }
+    };
+  }, []);
 
-function App() {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Profile" component={Profile} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
+  return <AuthContext.Provider value={authContext}>
+          <NavigationContainer>
+              { user  ? <BottomTabNav />
+                      :  <AuthStack.Navigator>
+                            <AuthStack.Screen
+                            name = "SignIn"
+                            component={SignIn}
+                            />
+                        </AuthStack.Navigator>
+              }
+            </NavigationContainer>
+           </AuthContext.Provider>
 }
-
-export default App;
-
