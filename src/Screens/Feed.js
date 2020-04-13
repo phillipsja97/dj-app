@@ -1,8 +1,8 @@
-import React from 'react'
-import { StyleSheet, View, Text, Image } from 'react-native'
-import { Container, Title, Content, Card, CardItem, Thumbnail, Button, Icon, Left, Body, Right, H3 } from 'native-base'
-import { Appbar, header, BackAction, Action } from 'react-native-paper';
-import { AuthContext } from '../Context/Context'
+import { Body, Button, Card, CardItem, Container, Content, H3, Icon, Left, Right, Thumbnail } from 'native-base';
+import React from 'react';
+import { Image, StyleSheet, Text } from 'react-native';
+import { Appbar } from 'react-native-paper';
+import { AuthContext } from '../Context/Context';
 
 function Feed(props) {
   const { signOut } = React.useContext(AuthContext)
