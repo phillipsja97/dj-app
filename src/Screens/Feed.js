@@ -2,8 +2,10 @@ import React from 'react'
 import { StyleSheet, View, Text, Image } from 'react-native'
 import { Container, Title, Content, Card, CardItem, Thumbnail, Button, Icon, Left, Body, Right, H3 } from 'native-base'
 import { Appbar, header, BackAction, Action } from 'react-native-paper';
+import { AuthContext } from '../Context/Context'
 
 function Feed(props) {
+  const { signOut } = React.useContext(AuthContext)
   return (
     <Container>
     <Appbar.Header
@@ -13,7 +15,7 @@ function Feed(props) {
           title="Social"
         />
         <Appbar.Action icon="magnify"/>
-        <Appbar.Action icon="logout" />
+        <Appbar.Action icon="logout" onPress={() => signOut()} />
       </Appbar.Header>
       <Content>
         <Card>
