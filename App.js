@@ -17,6 +17,9 @@ export default function App() {
     return {
       signIn: () => {
         setUser('asdf');
+      },
+      signOut: () => {
+        setUser(null);
       }
     };
   }, []);
@@ -24,7 +27,11 @@ export default function App() {
   return <AuthContext.Provider value={authContext}>
           <NavigationContainer>
               { user  ? <BottomTabNav />
-                      :  <AuthStack.Navigator>
+                      :  <AuthStack.Navigator
+                            screenOptions={{
+                              headerShown: false,
+                            }}
+                          >
                             <AuthStack.Screen
                             name = "SignIn"
                             component={SignIn}

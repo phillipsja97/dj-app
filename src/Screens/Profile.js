@@ -2,9 +2,11 @@ import React from 'react'
 import { StyleSheet, View, Text, Image, Navigation } from 'react-native'
 import { Container, Title, Content, Header, Card, CardItem, Thumbnail, Button, Icon, Left, Body, Right } from 'native-base'
 import { Appbar, header, BackAction, Action } from 'react-native-paper';
+import { AuthContext } from '../Context/Context'
 
 
 function Profile(props) {
+  const { signOut } = React.useContext(AuthContext)
   return (
     <View>
           <Appbar.Header
@@ -14,7 +16,7 @@ function Profile(props) {
           title="Profile"
         />
         <Appbar.Action icon="magnify"/>
-        <Appbar.Action icon="logout" />
+        <Appbar.Action icon="logout" onPress={() => signOut()} />
       </Appbar.Header>
     </View>
   )
