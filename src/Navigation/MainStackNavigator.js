@@ -3,9 +3,10 @@ import { StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Button, Text, Icon } from 'native-base';
-import Home from '../Screens/Home';
+import Home from '../Screens/Messages';
 import Profile from '../Screens/Profile';
 import Feed from '../Screens/Feed';
+
 const Stack = createStackNavigator();
 
 function MainStackNavigator() {
@@ -56,7 +57,7 @@ function MainStackNavigator() {
             </Button>
             ),
           })}
-      />
+          />
       </Stack.Navigator>
     </NavigationContainer>
   )
