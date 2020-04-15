@@ -6,6 +6,7 @@ import Home from '../Screens/Messages';
 import Profile from '../Screens/Profile';
 import Feed from '../Screens/Feed';
 import Chat from '../Screens/Chat';
+import Venue from '../Screens/Venues'
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -54,6 +55,17 @@ function MyTabs() {
           tabBarLabel: 'Chat',
           tabBarIcon: ({ color }) => (
             <Icon type ="MaterialIcons" name="notifications" style={styles.icon} />
+          ),
+        }}
+      />
+       <Tab.Screen
+        name="Venues"
+        component={Venue}
+        onPress={() => navigation.navigate('Venues')}
+        options={{
+          tabBarLabel: 'Venues',
+          tabBarIcon: ({ color }) => (
+            <Icon type ="Ionicons" name="ios-business" style={styles.icon} />
           ),
         }}
       />

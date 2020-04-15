@@ -1,12 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { StyleSheet, View, Text, Image, Navigation } from 'react-native'
 import { Container, Title, Card, CardItem, Thumbnail, Button, Icon, Left, Body, Right } from 'native-base'
-import { Appbar, header, BackAction, Content, Action, List, Avatar, Divider } from 'react-native-paper';
+import { Appbar, header, BackAction, Content, Action, List, Avatar, Divider, Searchbar } from 'react-native-paper';
 import { AuthContext } from '../Context/Context'
-
 
 function Chat(props) {
   const { navigation, route } = props;
+  const [searchQuery, setSearchQuery] = useState('');
+
+
+  const _onChangeSearch = query => setSearchQuery(query);
+
   return (
     <React.Fragment>
     <View>
@@ -19,6 +23,14 @@ function Chat(props) {
         <Appbar.Action icon="magnify"/>
         <Appbar.Action icon="logout" onPress={() => signOut()} />
       </Appbar.Header>
+    </View>
+    <View>
+    <Searchbar
+        placeholder="Search"
+        onChangeText={_onChangeSearch}
+        value={searchQuery}
+        icon="arrow-back"
+    />
     </View>
     <View>
     <List.Item
