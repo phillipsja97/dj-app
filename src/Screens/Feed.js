@@ -129,7 +129,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
   },
   header: {
-    backgroundColor: 'black'
+    backgroundColor: 'rgb(0, 102, 245)'
   },
   card: {
     backgroundColor: '#DCDCDC'

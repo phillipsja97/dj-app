@@ -23,7 +23,11 @@ function MyTabs() {
   return (
     <Tab.Navigator
       initialRouteName="Profile"
-      activeColor='white'
+      tabBarOptions={{
+        activeBackgroundColor: '#000000',
+        inactiveBackgroundColor: '#000000',
+        activeTintColor: 'black'
+      }}
     >
       <Tab.Screen
         name="Profile"
@@ -31,8 +35,8 @@ function MyTabs() {
         onPress={() => navigation.navigate('Profile')}
         options={{
           tabBarLabel: 'Profile',
-          tabBarIcon: () => (
-            <Icon type ="MaterialIcons" name="person" style={styles.icon} />
+          tabBarIcon: ({ color }) => (
+            <Icon type ="MaterialIcons" name="person" color={color} style={styles.icon} />
           ),
         }}
       />
@@ -43,7 +47,7 @@ function MyTabs() {
         options={{
           tabBarLabel: 'Feed',
           tabBarIcon: ({ color }) => (
-            <Icon type ="Foundation" name="social-instagram" style={styles.icon} />
+            <Icon type ="Foundation" name="social-instagram" color={color} style={styles.icon} />
             ),
           }}
       />
@@ -54,7 +58,7 @@ function MyTabs() {
         options={{
           tabBarLabel: 'Chat',
           tabBarIcon: ({ color }) => (
-            <Icon type ="MaterialIcons" name="notifications" style={styles.icon} />
+            <Icon type ="MaterialIcons" name="notifications" color={color} style={styles.icon} />
           ),
         }}
       />
@@ -65,7 +69,7 @@ function MyTabs() {
         options={{
           tabBarLabel: 'Venues',
           tabBarIcon: ({ color }) => (
-            <Icon type ="Ionicons" name="ios-business" style={styles.icon} />
+            <Icon type ="Ionicons" name="ios-business" color={color} style={styles.icon} />
           ),
         }}
       />

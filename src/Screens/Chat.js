@@ -70,7 +70,7 @@ function Chat(props) {
 
 const styles = StyleSheet.create({
   header: {
-    backgroundColor: 'black'
+    backgroundColor: 'rgb(0, 102, 245)'
   }
 })
 
