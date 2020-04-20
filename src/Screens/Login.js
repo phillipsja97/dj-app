@@ -27,7 +27,7 @@ const styles = StyleSheet.create ({
     height: 200, 
     width: 200, 
     marginBottom: 10,
-    color: 'white'
+    backgroundColor: 'transparent'
   }
 })
 
@@ -37,7 +37,7 @@ function Home() {
        <ImageBackground source={image} style={{ height: '100%', width: '100%' }}>
        <View style={styles.text} >
         <Image source={{
-            uri: 'https://o.remove.bg/downloads/b3e70694-5e30-4dca-8f5f-c57b03203050/DJ-removebg-preview.png'
+            uri: 'https://github.com/phillipsja97/dj-app/blob/master/src/Assets/DJ.jpg?raw=true'
             }} 
             style={styles.logo} 
           />
@@ -47,6 +47,9 @@ function Home() {
                 <Icon type="AntDesign" name="google"></Icon>
                 <Text style={styles.buttonText}>Login with Google</Text>
               </Button>
+              <Text style={styles.buttonText}
+              onPress={() => alert('account creation page')}
+              >Or Create An Account Here</Text>
        </View>
        </ImageBackground>
     );

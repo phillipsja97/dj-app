@@ -29,7 +29,6 @@ function Chat(props) {
         placeholder="Search"
         onChangeText={_onChangeSearch}
         value={searchQuery}
-        icon="arrow-back"
     />
     </View>
     <View>
