@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
     margin: 5
   },
   header: {
-    backgroundColor: 'black'
+    backgroundColor: 'rgb(0, 102, 245)'
   },
   icon: {
     color: 'white'
