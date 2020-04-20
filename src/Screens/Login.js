@@ -22,6 +22,12 @@ const styles = StyleSheet.create ({
   buttonText: {
     fontSize: 20,
     color: '#fff'
+  }, 
+  logo: {
+    height: 200, 
+    width: 200, 
+    marginBottom: 10,
+    color: 'white'
   }
 })
 
@@ -31,9 +37,9 @@ function Home() {
        <ImageBackground source={image} style={{ height: '100%', width: '100%' }}>
        <View style={styles.text} >
         <Image source={{
-            uri: 'https://www.logofury.com/blog/wp-content/uploads/2018/12/DJ-Logo-Idea-1.jpg'
+            uri: 'https://o.remove.bg/downloads/b3e70694-5e30-4dca-8f5f-c57b03203050/DJ-removebg-preview.png'
             }} 
-            style={{ height: 200, width: 200, marginBottom: 50 }} 
+            style={styles.logo} 
           />
               <Button full danger iconRight
                 style={styles.buttonContainer}
